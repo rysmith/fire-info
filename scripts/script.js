@@ -73,7 +73,7 @@ var aqiWidgets = (function() {
         var rowItem = domUtility.buildNode('div', '', [{ key: 'class', value: 'row-item' }]);
         var h2 = domUtility.buildNode('h2', item.title)
 
-        h2.appendChild(button(widget.url_position))
+        h2.appendChild(button(item.url_position))
         domUtility.appendChildren(rowItem, h2, widget(item.id))
 
         rowElement.appendChild(rowItem);

@@ -1,0 +1,85 @@
+body {
+    background-image: url('../images/IMG_0147.jpg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    text-align: center;
+}
+
+h1,
+h2,
+h3,
+p {
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+h1,
+h2 {
+    text-align: center;
+    background-color: white;
+    padding: 20px 10px;
+    border-radius: 10px;
+}
+
+h2 {
+    display: inline-block;
+    width: 90%
+}
+
+hr {
+    width: 700px;
+    text-align: center;
+    color: white;
+}
+
+button {
+    margin-left: 5px;
+    height: 50px;
+    width: 70px;
+    border-radius: 3px;
+    background-color: rgb(221, 221, 221);
+    font-size: 20px
+}
+
+iframe {
+    display: block;
+}
+
+.container {
+    margin: 0 25px;
+}
+
+.row {
+    margin: 30px
+}
+
+.row-item {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.spinner-wrapper {
+    height: 300px;
+    width: 250px;
+    margin: 5px;
+    background-color: rgb(218, 218, 218);
+    vertical-align: middle;
+    border-radius: 10px;
+}
+
+.spinner {
+    margin-top: 100px;
+}
+
+.warning {
+    background-color: #f7f28f;
+}
+
+.danger {
+    background-color: #f7be8f;
+}
+
+.evac-info {
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}

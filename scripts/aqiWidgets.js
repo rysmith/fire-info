@@ -1,4 +1,6 @@
 var aqiWidgets = (function() {
+    var containerId = 'aqi-widgets'
+
     function widgetRow(row, widgetContainer) {
         var rowElement = domUtility.buildNode('div', '', [{ key: 'class', value: 'row' }]);
 
@@ -59,7 +61,7 @@ var aqiWidgets = (function() {
 
     return {
         build: function(widgetData) {
-            var widgetContainer = document.getElementById('widgets');
+            var widgetContainer = document.getElementById(containerId);
 
             var titleIcon = domUtility.buildIcon('fas fa-wind');
             var titleText = document.createTextNode(' PM 2.5');

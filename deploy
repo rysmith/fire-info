@@ -1,0 +1,3 @@
+echo 'Deploying to s3://r4an.com...'
+aws s3 sync . s3://r4an.com --acl public-read --exclude ".gitignore" --exclude ".git/*" --exclude '*.md' --exclude '.DS_Store' --exclude 'deploy'
+echo 'Deploy complete...'

@@ -1,4 +1,6 @@
 var creekFire = (function() {
+    var containerId = 'creek-fire'
+
     function evacInfo(wrapper_style, icon_style, title, text) {
         var style = wrapper_style + ' evac-info'
         var wrapper = domUtility.buildNode('div', '', [{ key: 'class', value: style }]);
@@ -43,7 +45,7 @@ var creekFire = (function() {
 
     return {
         build: function() {
-            var creekFireContainer = document.getElementById('creek-fire');
+            var creekFireContainer = document.getElementById(containerId);
             var fireIcon = domUtility.buildIcon('fas fa-fire-alt');
             var sectionTitle = document.createTextNode(' Creek Fire');
             var incidentLink = domUtility.buildNode('a', 'Incident Site', [

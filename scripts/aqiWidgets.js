@@ -10,7 +10,11 @@ var aqiWidgets = (function() {
     }
 
     function widgetRowItem(item, rowElement) {
-        var rowItem = domUtility.buildNode('div', '', [{ key: 'class', value: 'row-item' }]);
+        var rowItemId = 'purpleAirWidget-' + item.id
+        var rowItem = domUtility.buildNode('div', '', [
+            { key: 'class', value: 'row-item' },
+            { key: 'id', value: rowItemId }
+        ]);
         var h2 = domUtility.buildNode('h2', item.title)
 
         h2.appendChild(button(item.url_position))

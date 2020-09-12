@@ -1,2 +1,3 @@
-aqiWidgets.build(widgetData);
+aqiWidgets.build(widgets);
+widgets.fetchSensorData()
 creekFire.build();

@@ -64,7 +64,7 @@ var aqiWidgets = (function() {
     }
 
     return {
-        build: function(widgetData) {
+        build: function(sensors) {
             var widgetContainer = document.getElementById(containerId);
 
             var titleIcon = domUtility.buildIcon('fas fa-wind');
@@ -74,7 +74,7 @@ var aqiWidgets = (function() {
             domUtility.appendChildren(h1, titleIcon, titleText)
             widgetContainer.appendChild(h1)
 
-            widgetData.rows.map(function(row) { widgetRow(row, widgetContainer) });
+            sensors.map(function(sensor) { widgetRow(sensor, widgetContainer) });
             spinners();
         },
     }

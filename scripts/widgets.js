@@ -31,7 +31,12 @@ var widgets = (function() {
                 id: 56241,
                 url_position: 10
             }
-        ]
+        ],
+        [{
+            title: 'Mendocino',
+            id: 62747,
+            url_position: 12
+        }]
     ];
 
     return {

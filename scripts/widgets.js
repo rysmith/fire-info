@@ -33,10 +33,16 @@ var widgets = (function() {
             }
         ],
         [{
-            title: 'Mendocino',
-            id: 62747,
-            url_position: 12
-        }]
+                title: 'Mendocino',
+                id: 62747,
+                url_position: 12
+            },
+            {
+                title: 'Willow Glen',
+                id: 54825,
+                url_position: 14
+            }
+        ]
     ];
 
     return {

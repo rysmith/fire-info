@@ -57,7 +57,8 @@ var widgets = (function() {
         sensors: sensors,
         buildWidgetScripts: function() {
             var body = document.getElementById('body');
-            sensors.flat().map(function(sensor) {
+
+            sensors.flat().forEach(function(sensor) {
                 var src = 'https://www.purpleair.com/pa.widget.js?key=' + sensor.thingspeak_id + '&module=AQI&conversion=C0&average=10&layer=standard&container=PurpleAirWidget_' + sensor.id + '_module_AQI_conversion_C0_average_10_layer_standard';
                 var script = domUtility.buildNode('script', '', [{ key: 'src', value: src }])
 

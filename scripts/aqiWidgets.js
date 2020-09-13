@@ -6,7 +6,7 @@ var aqiWidgets = (function() {
 
         widgetContainer.appendChild(rowElement);
 
-        row.map(function(widget) { widgetRowItem(widget, rowElement) });
+        row.forEach(function(widget) { widgetRowItem(widget, rowElement) });
     }
 
     function widgetRowItem(item, rowElement) {
@@ -52,7 +52,7 @@ var aqiWidgets = (function() {
         var htmlCollection = document.getElementsByClassName('widget');
         var widgets = [].slice.call(htmlCollection);
 
-        widgets.map(function(widget) { spinner(widget) });
+        widgets.forEach(function(widget) { spinner(widget) });
     }
 
     function spinner(widget) {
@@ -74,7 +74,7 @@ var aqiWidgets = (function() {
             domUtility.appendChildren(h1, titleIcon, titleText)
             widgetContainer.appendChild(h1)
 
-            sensors.map(function(sensor) { widgetRow(sensor, widgetContainer) });
+            sensors.forEach(function(sensor) { widgetRow(sensor, widgetContainer) });
             spinners();
         },
     }

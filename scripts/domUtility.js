@@ -4,7 +4,7 @@ var domUtility = (function() {
         var textNode = document.createTextNode(text);
 
         node.appendChild(textNode);
-        attributes.map(function(attribute) { node.setAttribute(attribute.key, attribute.value) });
+        attributes.forEach(function(attribute) { node.setAttribute(attribute.key, attribute.value) });
 
         return node
     }
@@ -29,7 +29,7 @@ var domUtility = (function() {
             return buildNode('i', '', [{ key: 'class', value: style }]);
         },
         appendChildren: function(element, ...children) {
-            children.map(function(child) { element.appendChild(child) });
+            children.forEach(function(child) { element.appendChild(child) });
         },
         fetchSensorData: function(sensor) {
             var request = new XMLHttpRequest();

@@ -16,12 +16,21 @@ var creekFire = (function() {
         return wrapper;
     }
 
-    function evacWarnings() {
+    function evacWarnings1() {
         return evacInfo(
             'warning',
             'fas fa-info-circle',
             'Evacuation Warnings',
-            'Oakhurst, O’Neals, Walker Grade, Chukchansi, Indian Lakes, and the portion of Coarsegold east of Highway 41.'
+            'Note that some evacuation warnings have been lifted for areas of Oakhurst and Corsegold just East of Highway 41.  See incident map for more details.'
+        );
+    }
+
+    function evacWarnings2() {
+        return evacInfo(
+            'warning',
+            'fas fa-info-circle',
+            'Evacuation Warnings',
+            'Oakhurst, O’Neals, Walker Grade, Chukchansi, Indian Lakes, and the portion of Coarsegold east of Highway 41.  '
         );
     }
 
@@ -58,7 +67,14 @@ var creekFire = (function() {
 
             domUtility.appendChildren(h1, fireIcon, sectionTitle);
             domUtility.appendChildren(subheader, domUtility.buildIcon('fas fa-external-link-alt'), document.createTextNode(' '), incidentLink);
-            domUtility.appendChildren(creekFireContainer, h1, buildEvacOrders(), evacWarnings(), subheader, evacuationMap());
+            domUtility.appendChildren(creekFireContainer,
+                h1,
+                buildEvacOrders(),
+                evacWarnings1(),
+                evacWarnings2(),
+                subheader,
+                evacuationMap()
+            );
         }
     }
 })();

@@ -39,7 +39,7 @@ var creekFire = (function() {
             { key: 'title', value: 'Evacuation Overlay' },
             { key: 'width', value: '100%' },
             { key: 'height', value: '1000' },
-            { key: 'src', value: 'https://maderacounty.maps.arcgis.com/apps/webappviewer/index.html?id=c7155765748b4e82b5419dad890d6325' }
+            { key: 'src', value: 'https://nifc.maps.arcgis.com/apps/webappviewer/index.html?id=28ce52cb86bf49dea0adef5a78b3c1b5' }
         ]);
     }
 

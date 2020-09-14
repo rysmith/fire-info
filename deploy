@@ -1,6 +1,6 @@
 echo '♻️ Cleaning old js files'
 aws s3 rm s3://r4an.com/scripts --recursive
-echo '✅Old js files removed'
+echo '✅ Old js files removed'
 echo ''
 echo '♻️ Cleaning old css files'
 aws s3 rm s3://r4an.com/styles --recursive

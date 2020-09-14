@@ -9,6 +9,23 @@ var domUtility = (function() {
         return node
     }
 
+    function buildIcon(style) {
+        return buildNode('i', '', [{ key: 'class', value: style }]);
+    }
+
+    function appendChildren(element, ...children) {
+        children.forEach(function(child) { element.appendChild(child) });
+    }
+
+    function fetchSensorData(sensor) {
+        var request = new XMLHttpRequest();
+        var url = 'http://www.purpleair.com/json?show=' + sensor.id
+
+        request.addEventListener("load", reqListener);
+        request.open('GET', url);
+        request.send();
+    }
+
     function reqListener() {
         var response = JSON.parse(this.response).results;
         var sensor1 = response[0];
@@ -25,19 +42,8 @@ var domUtility = (function() {
 
     return {
         buildNode: buildNode,
-        buildIcon: function(style) {
-            return buildNode('i', '', [{ key: 'class', value: style }]);
-        },
-        appendChildren: function(element, ...children) {
-            children.forEach(function(child) { element.appendChild(child) });
-        },
-        fetchSensorData: function(sensor) {
-            var request = new XMLHttpRequest();
-            var url = 'http://www.purpleair.com/json?show=' + sensor.id
-
-            request.addEventListener("load", reqListener);
-            request.open('GET', url);
-            request.send();
-        }
+        buildIcon: buildIcon,
+        appendChildren: appendChildren,
+        fetchSensorData: fetchSensorData
     }
 })();

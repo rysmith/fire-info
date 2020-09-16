@@ -49,6 +49,12 @@ var widgets = (function() {
                 id: 54825,
                 thingspeak_id: 'K5OY7G4QYTY3QU4N',
                 url_position: 14
+            },
+            {
+                title: 'Lake Davis',
+                id: 15603,
+                thingspeak_id: '1HN5HKWYUVV6AZP6',
+                url_position: 16
             }
         ]
     ];

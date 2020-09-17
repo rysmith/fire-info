@@ -26,23 +26,26 @@ var creekFire = (function() {
         ]);
     }
 
-    function header(text, icon) {
+    function header(text, icon_style) {
         var h1 = domUtility.buildNode('h1');
-        var fireIcon = domUtility.buildIcon(icon);
+        var icon = domUtility.buildIcon(icon_style);
         var sectionTitle = document.createTextNode(' ' + text);
-        domUtility.appendChildren(h1, fireIcon, sectionTitle);
+
+        domUtility.appendChildren(h1, icon, sectionTitle);
 
         return h1
     }
 
     function headerLink(text, url) {
         var subheader = domUtility.buildNode('h1');
+        var icon = domUtility.buildIcon('fas fa-external-link-alt')
+        var space = document.createTextNode(' ')
         var incidentLink = domUtility.buildNode('a', text, [
             { key: 'href', value: url },
             { key: 'target', value: '_blank' }
         ])
 
-        domUtility.appendChildren(subheader, domUtility.buildIcon('fas fa-external-link-alt'), document.createTextNode(' '), incidentLink);
+        domUtility.appendChildren(subheader, icon, space, incidentLink);
 
         return subheader
     }

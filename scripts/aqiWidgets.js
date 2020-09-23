@@ -3,8 +3,8 @@ var aqiWidgets = (function() {
     var container = document.getElementById(containerId);
 
     function button(url_position) {
-        var icon = domUtility.buildIcon('far fa-map');
-        var button = domUtility.buildNode('button');
+        var icon = domUtility.buildIcon('fas fa-map-marked-alt');
+        var button = domUtility.buildNode('button', '', [{ key: 'class', value: 'widget-button' }]);
 
         button.appendChild(icon)
         button.addEventListener('click', buttonClickHandler(url_position), false);

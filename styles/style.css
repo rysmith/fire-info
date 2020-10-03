@@ -61,6 +61,10 @@ iframe {
     margin-top: 100px;
 }
 
+.ok {
+    background-color: rgba(139, 255, 85, 0.918);
+}
+
 .warning {
     background-color: #f7f28f;
 }

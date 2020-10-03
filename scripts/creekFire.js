@@ -56,22 +56,10 @@ var creekFire = (function() {
             headerLink('Evacuation Map', 'https://nifc.maps.arcgis.com/apps/webappviewer/index.html?id=28ce52cb86bf49dea0adef5a78b3c1b5'),
             headerLink('Incident Site', 'https://inciweb.nwcg.gov/incident/7147/'),
             evacInfo(
-                'danger',
-                'fas fa-exclamation-triangle',
-                'Evacuation Orders',
-                'Bass Lake Basin, including Wishon, Bass Lake Annex, and Manzanita; the town of North Fork and surrounding area.'
-            ),
-            evacInfo(
-                'warning',
-                'fas fa-info-circle',
-                'Evacuation Warning Update',
-                'Note that some evacuation warnings have been lifted for areas of Oakhurst and Corsegold just East of Highway 41.  See evacuation map for more details.'
-            ),
-            evacInfo(
-                'warning',
-                'fas fa-info-circle',
-                'Evacuation Warnings',
-                'Oakhurst, O’Neals, Walker Grade, Chukchansi, Indian Lakes, and the portion of Coarsegold east of Highway 41.'
+                'ok',
+                'fas fa-thumbs-up',
+                'Evacuation Orders Lifted',
+                'Most warnings have been lifted from the Oakhurst area.'
             ),
             header('Embeded Evacuation Map', 'far fa-map'),
             evacuationMap()

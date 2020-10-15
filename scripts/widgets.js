@@ -26,9 +26,9 @@ var widgets = (function() {
                 url_position: 6
             },
             {
-                title: 'Los Banos',
-                id: 3277,
-                thingspeak_id: '1NRNNYS0S35WM2XP',
+                title: 'Ft. Collins',
+                id: 9936,
+                thingspeak_id: 'QJ60EOKUW4SYP5M1',
                 url_position: 8
             },
             {

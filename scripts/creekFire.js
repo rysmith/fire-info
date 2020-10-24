@@ -53,6 +53,7 @@ var creekFire = (function() {
     function build() {
         domUtility.appendChildren(container,
             header('Creek Fire', 'fas fa-fire-alt'),
+            headerLink('PG&E Shutoff - Address Lookup', 'https://pgealerts.alerts.pge.com/addresslookup/'),
             headerLink('Evacuation Map', 'https://nifc.maps.arcgis.com/apps/webappviewer/index.html?id=28ce52cb86bf49dea0adef5a78b3c1b5'),
             headerLink('Incident Site', 'https://inciweb.nwcg.gov/incident/7147/'),
             evacInfo(

@@ -7,24 +7,24 @@ var widgets = (function() {
                 url_position: 0
             },
             {
-                title: 'Ventura',
-                id: 27397,
-                thingspeak_id: '4412GSB18YXW7UH7',
+                title: 'Clovis',
+                id: 14219,
+                thingspeak_id: 'SOQF3SZC9AU79U8V',
                 url_position: 2
             },
             {
-                title: 'Aptos',
-                id: 4952,
-                thingspeak_id: 'KVHW6O5P6IPLUXW7',
-                url_position: 4
+                title: 'Ventura',
+                id: 27397,
+                thingspeak_id: '4412GSB18YXW7UH7',
+                url_position: 3
             }
         ],
         [{
-                title: '12th & Judah',
-                id: 60015,
-                thingspeak_id: 'OZUQH57IOWW840PA',
-                url_position: 6
-            },
+                title: 'Aptos',
+                id: 4952,
+                thingspeak_id: 'KVHW6O5P6IPLUXW7',
+                url_position: 12
+            }, ,
             {
                 title: 'Ft. Collins',
                 id: 9936,
@@ -39,10 +39,10 @@ var widgets = (function() {
             }
         ],
         [{
-                title: 'Mendocino',
-                id: 62747,
-                thingspeak_id: 'LM78PLMKJKXX0WV3',
-                url_position: 12
+                title: '12th & Judah',
+                id: 60015,
+                thingspeak_id: 'OZUQH57IOWW840PA',
+                url_position: 6
             },
             {
                 title: 'Willow Glen',

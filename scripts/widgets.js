@@ -16,14 +16,14 @@ var widgets = (function() {
                 title: 'Ventura',
                 id: 27397,
                 thingspeak_id: '4412GSB18YXW7UH7',
-                url_position: 3
+                url_position: 4
             }
         ],
         [{
                 title: 'Aptos',
                 id: 4952,
                 thingspeak_id: 'KVHW6O5P6IPLUXW7',
-                url_position: 12
+                url_position: 6
             }, ,
             {
                 title: 'Ft. Collins',
@@ -42,7 +42,7 @@ var widgets = (function() {
                 title: '12th & Judah',
                 id: 60015,
                 thingspeak_id: 'OZUQH57IOWW840PA',
-                url_position: 6
+                url_position: 12
             },
             {
                 title: 'Willow Glen',

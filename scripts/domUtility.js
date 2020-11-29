@@ -4,7 +4,9 @@ var domUtility = (function() {
         var textNode = document.createTextNode(text);
 
         node.appendChild(textNode);
-        attributes.forEach(function(attribute) { node.setAttribute(attribute.key, attribute.value) });
+        attributes.forEach(function(attribute) {
+            node.setAttribute(attribute.key, attribute.value)
+        });
 
         return node
     }
@@ -14,7 +16,9 @@ var domUtility = (function() {
     }
 
     function appendChildren(element, ...children) {
-        children.forEach(function(child) { element.appendChild(child) });
+        children.forEach(function(child) {
+            element.appendChild(child)
+        });
     }
 
     function fetchSensorData(sensor) {

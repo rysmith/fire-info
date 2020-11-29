@@ -13,9 +13,9 @@ var widgets = (function() {
                 url_position: 2
             },
             {
-                title: 'Ventura',
-                id: 27397,
-                thingspeak_id: '4412GSB18YXW7UH7',
+                title: 'Raymond',
+                id: 75761,
+                thingspeak_id: 'MF3RMUYDG4P4O0WP',
                 url_position: 4
             }
         ],
@@ -26,15 +26,15 @@ var widgets = (function() {
                 url_position: 6
             }, ,
             {
-                title: 'Ft. Collins',
-                id: 9936,
-                thingspeak_id: 'QJ60EOKUW4SYP5M1',
+                title: 'Ventura',
+                id: 27397,
+                thingspeak_id: '4412GSB18YXW7UH7',
                 url_position: 8
             },
             {
-                title: 'San Rafael',
-                id: 56241,
-                thingspeak_id: 'C5W5XDTXGCSEI0YF',
+                title: 'Willow Glen',
+                id: 54825,
+                thingspeak_id: 'K5OY7G4QYTY3QU4N',
                 url_position: 10
             }
         ],
@@ -45,15 +45,15 @@ var widgets = (function() {
                 url_position: 12
             },
             {
-                title: 'Willow Glen',
-                id: 54825,
-                thingspeak_id: 'K5OY7G4QYTY3QU4N',
+                title: 'San Rafael',
+                id: 56241,
+                thingspeak_id: 'C5W5XDTXGCSEI0YF',
                 url_position: 14
             },
             {
-                title: 'Lake Davis',
-                id: 15603,
-                thingspeak_id: '1HN5HKWYUVV6AZP6',
+                title: 'Ft. Collins',
+                id: 9936,
+                thingspeak_id: 'QJ60EOKUW4SYP5M1',
                 url_position: 16
             }
         ]

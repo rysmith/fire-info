@@ -72,7 +72,7 @@ var widgets = (function() {
             });
         },
         fetchSensorData: function() {
-            return sensors.flat().map(domUtility.fetchSensorData)
+            return sensors.flatMap(domUtility.fetchSensorData)
         }
     }
 })();

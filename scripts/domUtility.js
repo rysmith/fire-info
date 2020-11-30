@@ -44,9 +44,21 @@ var domUtility = (function() {
         // rowItemElement.appendChild(p);
     }
 
+    function chunk(array, size) {
+        var chunkedArrayTemplate = { length: Math.ceil(array.length / size) }
+
+        return Array.from(chunkedArrayTemplate, function(_, index) {
+            var startIndex = index * size;
+            var endIndex = index * size + size;
+
+            return array.slice(startIndex, endIndex);
+        })
+    }
+
     return {
         buildNode: buildNode,
         buildIcon: buildIcon,
+        chunk: chunk,
         appendChildren: appendChildren,
         fetchSensorData: fetchSensorData
     }

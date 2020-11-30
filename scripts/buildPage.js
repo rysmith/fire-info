@@ -1,3 +1,3 @@
 widgets.buildWidgetScripts();
-aqiWidgets.build(widgets.sensors);
+aqiWidgets.build(widgets.sensorsForDisplay);
 widgets.fetchSensorData()

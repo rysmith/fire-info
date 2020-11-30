@@ -21,29 +21,6 @@ var domUtility = (function() {
         });
     }
 
-    function fetchSensorData(sensor) {
-        var request = new XMLHttpRequest();
-        var url = 'http://www.purpleair.com/json?show=' + sensor.id
-
-        request.addEventListener("load", reqListener);
-        request.open('GET', url);
-        request.send();
-    }
-
-    function reqListener() {
-        var response = JSON.parse(this.response).results;
-        var sensor1 = response[0];
-        var sensor2 = response[1];
-        var id = sensor1.ID;
-        var pm2_5_atm = sensor1.pm2_5_atm;
-        var temp_f = sensor1.temp_f;
-        var rowItemElement = document.getElementById('purpleAirWidget-' + id);
-        var text = sensor1.Label + ': ' + pm2_5_atm + '[pm2_5_atm]' + ' | ' + temp_f + '[temp_f]';
-
-        var p = buildNode('p', text);
-        // rowItemElement.appendChild(p);
-    }
-
     function chunk(array, size) {
         var chunkedArrayTemplate = { length: Math.ceil(array.length / size) }
 
@@ -60,6 +37,5 @@ var domUtility = (function() {
         buildIcon: buildIcon,
         chunk: chunk,
         appendChildren: appendChildren,
-        fetchSensorData: fetchSensorData
     }
 })();

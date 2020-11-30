@@ -2,24 +2,6 @@ var aqiWidgets = (function() {
     var containerId = 'aqi-widgets'
     var container = document.getElementById(containerId);
 
-    function button(url_position) {
-        var icon = domUtility.buildIcon('fas fa-map-marked-alt');
-        var button = domUtility.buildNode('button', '', [{ key: 'class', value: 'widget-button' }]);
-
-        button.appendChild(icon)
-        button.addEventListener('click', buttonClickHandler(url_position), false);
-
-        return button
-    }
-
-    function buttonClickHandler(index) {
-        var widgetElements = document.getElementsByClassName("legend-tooltip deviceIcon nb");
-
-        return function openMap() {
-            window.open(widgetElements[index].firstChild.href)
-        }
-    }
-
     function widget(widget_id) {
         var id = 'PurpleAirWidget_' + widget_id + '_module_AQI_conversion_C0_average_10_layer_standard';
 
@@ -60,9 +42,10 @@ var aqiWidgets = (function() {
             { key: 'class', value: 'row-item' },
             { key: 'id', value: rowItemId }
         ]);
-        var h2 = domUtility.buildNode('h2', item.title)
 
-        h2.appendChild(button(item.url_position))
+        var h2Id = 'purpleAirWidget-' + 'header-' + item.id;
+        var h2 = domUtility.buildNode('h2', item.title, [{ key: 'id', value: h2Id }]);
+
         domUtility.appendChildren(rowItem, h2, widget(item.id))
 
         rowElement.appendChild(rowItem);

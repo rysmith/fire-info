@@ -1,3 +1,3 @@
-widgets.buildWidgetScripts();
-widgets.fetchSensorData()
-aqiWidgets.build(widgets.sensorsForDisplay);
+aqiWidgets.buildWidgetScripts(sensors.metaData);
+aqiWidgets.buildWidgets(sensors.forDisplay);
+atmospherics.fetchSensorData(sensors.metaData)

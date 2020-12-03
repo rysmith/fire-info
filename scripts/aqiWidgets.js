@@ -60,14 +60,27 @@ var aqiWidgets = (function() {
         container.appendChild(header)
     }
 
+    function buildWidgetScripts(sensorMetaData) {
+        var body = document.getElementById('body');
+
+        sensorMetaData.forEach(function(sensor) {
+            var src = 'https://www.purpleair.com/pa.widget.js?key=' + sensor.thingspeak_id + '&module=AQI&conversion=C0&average=10&layer=standard&container=PurpleAirWidget_' + sensor.id + '_module_AQI_conversion_C0_average_10_layer_standard';
+            var script = domUtility.buildNode('script', '', [{ key: 'src', value: src }])
+
+            body.appendChild(script);
+        });
+    }
+
+    function buildWidgets(sensors) {
+        var widgetRowItem = widgetRow(container)
+
+        h1(container)
+        sensors.forEach(function(sensor) { widgetRowItem(sensor) });
+        spinners();
+    }
 
     return {
-        build: function(sensors) {
-            var widgetRowItem = widgetRow(container)
-
-            h1(container)
-            sensors.forEach(function(sensor) { widgetRowItem(sensor) });
-            spinners();
-        },
+        buildWidgetScripts: buildWidgetScripts,
+        buildWidgets: buildWidgets,
     }
 })();

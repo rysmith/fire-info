@@ -7,6 +7,7 @@ Can be found at [r4an.com](http://r4an.com)
 Via [Purple Air](https://www2.purpleair.com/) 
 
 ### 🔥 Fire Data
-Incident information via [InciWeb](https://inciweb.nwcg.gov/)
+Fire season is (almost) over here in CA.  Previous versions of the site used:
 
-Evacuation map via [arcgis](https://maderacounty.maps.arcgis.com/apps/webappviewer/index.html?id=c7155765748b4e82b5419dad890d6325)
+- Incident information via [InciWeb](https://inciweb.nwcg.gov/)
+- Evacuation map via [arcgis](https://maderacounty.maps.arcgis.com/apps/webappviewer/index.html?id=c7155765748b4e82b5419dad890d6325)

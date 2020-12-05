@@ -1,12 +1,12 @@
-echo '♻️ Cleaning old js files'
+echo '♻️  Cleaning old js files'
 aws s3 rm s3://r4an.com/scripts --recursive
 echo '✅ Old js files removed'
 echo ''
-echo '♻️ Cleaning old css files'
+echo '♻️  Cleaning old css files'
 aws s3 rm s3://r4an.com/styles --recursive
 echo '✅ Old css files removed'
 echo ''
-echo '🚢Deploying to s3://r4an.com...'
+echo '🚢 Deploying to s3://r4an.com...'
 aws s3 sync . s3://r4an.com --acl public-read --exclude ".gitignore" --exclude ".git/*" --exclude '*.md' --exclude '.DS_Store' --exclude 'deploy'
 echo '✅ Deploy complete...'
 echo ''

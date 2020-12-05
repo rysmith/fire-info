@@ -46,7 +46,7 @@ var aqiWidgets = (function() {
         var h2Id = 'purpleAirWidget-' + 'header-' + item.id;
         var h2 = domUtility.buildNode('h2', item.title, [{ key: 'id', value: h2Id }]);
 
-        domUtility.appendChildren(rowItem, h2, widget(item.id))
+        domUtility.appendChildren(rowItem, [h2, widget(item.id)])
 
         rowElement.appendChild(rowItem);
     }
@@ -56,7 +56,7 @@ var aqiWidgets = (function() {
         var titleText = document.createTextNode(' PM 2.5');
         var header = domUtility.buildNode('h1');
 
-        domUtility.appendChildren(header, titleIcon, titleText)
+        domUtility.appendChildren(header, [titleIcon, titleText])
         container.appendChild(header)
     }
 

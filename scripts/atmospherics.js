@@ -1,45 +1,37 @@
 var atmospherics = (function() {
-    function fetchSensorData(sensors) {
-        return sensors.map(function(sensor) {
-            var request = new XMLHttpRequest();
-            var url = 'http://www.purpleair.com/json?show=' + sensor.id
-
-            request.addEventListener("load", reqListener);
-            request.open('GET', url);
-            request.send();
-        })
-    }
-
-    function reqListener() {
-        var response = JSON.parse(this.response).results;
-        var sensor1 = response[0];
-        var id = sensor1.ID;
+    function buildMarkUp(sensor) {
+        var id = sensor.ID;
         var rowItemHeaderElement = document.getElementById('purpleAirWidget-' + 'header-' + id);
 
-        var hrElement = domUtility.buildNode('hr', '');
+        var tempText = 'Temp: ' + sensor.temp_f + '°' + ' F';
+        var humidityText = 'Relative Humidity: ' + sensor.humidity;
+        var pressureText = 'Pressure: ' + sensor.pressure;
 
-        var temp_f = sensor1.temp_f;
-        var tempElementText = 'Temp: ' + temp_f + '°' + ' F'
-        var tempElement = domUtility.buildNode('p', tempElementText)
-
-        var humidity = sensor1.humidity
-        var humidityElementText = 'Relative Humidity: ' + humidity
-        var humidityElement = domUtility.buildNode('p', humidityElementText)
-
-        var pressure = sensor1.pressure
-        var pressureElementText = 'Pressure: ' + pressure
-        var pressureElement = domUtility.buildNode('p', pressureElementText)
-
-        domUtility.appendChildren(
-            rowItemHeaderElement,
-            hrElement,
-            tempElement,
-            humidityElement,
-            pressureElement
+        return domUtility.appendChildren(
+            rowItemHeaderElement, [
+                domUtility.buildNode('hr'),
+                domUtility.buildNode('p', tempText),
+                domUtility.buildNode('p', humidityText),
+                domUtility.buildNode('p', pressureText),
+            ]
         );
     }
-
     return {
-        fetchSensorData: fetchSensorData
+        build: function(sensors) {
+            return sensors.map(function(sensor) {
+                var request = new XMLHttpRequest();
+                var url = 'http://www.purpleair.com/json?show=' + sensor.id
+
+                request.addEventListener("load", function() {
+                    var response = JSON.parse(this.response).results;
+                    var sensor1 = response[0];
+
+                    buildMarkUp(sensor1)
+                });
+
+                request.open('GET', url);
+                request.send();
+            });
+        }
     }
 })();

@@ -15,7 +15,7 @@ var domUtility = (function() {
         return buildNode('i', '', [{ key: 'class', value: style }]);
     }
 
-    function appendChildren(element, ...children) {
+    function appendChildren(element, children) {
         children.forEach(function(child) {
             element.appendChild(child)
         });

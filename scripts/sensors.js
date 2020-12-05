@@ -1,4 +1,6 @@
 var sensors = (function() {
+    'use strict'
+
     var metaData = [{
             title: 'Ahwahnee',
             id: 55199,

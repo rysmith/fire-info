@@ -1,4 +1,6 @@
 var atmospherics = (function() {
+    'use strict'
+
     function buildMarkUp(sensor) {
         var id = sensor.ID;
         var rowItemHeaderElement = document.getElementById('purpleAirWidget-' + 'header-' + id);

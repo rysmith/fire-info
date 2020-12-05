@@ -1,4 +1,6 @@
 var domUtility = (function() {
+    'use strict'
+
     function buildNode(tag, text = '', attributes = []) {
         var node = document.createElement(tag);
         var textNode = document.createTextNode(text);

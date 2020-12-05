@@ -1,4 +1,6 @@
 var aqiWidgets = (function() {
+    'use strict'
+
     var containerId = 'aqi-widgets'
     var container = document.getElementById(containerId);
 
